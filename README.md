@@ -15,12 +15,14 @@ mongodb:
 ```
 * Create some more environment configs, for example `production.yaml`
 * Set the `CONFIG_ENV` env variable to your preferred env
+* Use the module for the language you want and point to the relative path to the config folder you created
 
 ## js
 ```javascript
 var config = require('everyconfig')('./config')
 console.log(config.mongodb.url)
 ```
+(note that you can use `NODE_ENV` instead of `CONFIG_ENV` if you want)
 
 ## python
 ```python

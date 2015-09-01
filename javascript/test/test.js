@@ -1,3 +1,3 @@
-var config = require('everyconfig')('../config')
+var config = require('everyconfig')('../../config')
 
 console.log(config);
