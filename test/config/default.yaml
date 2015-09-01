@@ -1,0 +1,3 @@
+mongodb:
+  url: localhost/foundry
+  port: 27017

@@ -1,0 +1,2 @@
+mongodb:
+  url: some.internal.dns
