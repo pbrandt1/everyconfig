@@ -5,7 +5,7 @@ var _ = require('lodash')
 var path = require('path');
 
 module.exports = function(folder) {
-  var env = process.env.CONFIG_ENV || 'default';
+  var env = process.env.CONFIG_ENV || process.env.NODE_ENV || 'default';
   debug('env is %s', env)
   debug('folder specified: "%s"', folder)
   if (typeof folder !== 'string') {
