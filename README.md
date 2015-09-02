@@ -30,3 +30,10 @@ from everyconfig import everyconfig
 config = everyconfig('./config')
 print config.mongodb.url
 ```
+
+## ruby
+```ruby
+require 'everyconfig'
+config = Everyconfig.load('./config')
+puts c['mongodb']
+```
