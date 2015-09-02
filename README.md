@@ -35,5 +35,5 @@ print config.mongodb.url
 ```ruby
 require 'everyconfig'
 config = Everyconfig.load('./config')
-puts c['mongodb']
+puts config['mongodb']
 ```
