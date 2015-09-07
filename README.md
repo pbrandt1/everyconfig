@@ -6,7 +6,7 @@ Have you ever had to use javascript AND python AND ruby and talk to the same db?
 
 ## usage
 * Make a folder called `config` or something.
-* Create a file `default.yaml` in that foldera. ex:
+* Create a file `default.yaml` in that folder. ex:
 ```yaml
 mongodb:
   url: localhost
@@ -35,5 +35,25 @@ print config.mongodb.url
 ```ruby
 require 'everyconfig'
 config = Everyconfig.load('./config')
-puts config['mongodb']
+puts c['mongodb']['url']
 ```
+
+## bash
+*from https://gist.github.com/pkuczynski/8665367 (note that if you use four space indents, your variables will be separated by two underscores instead of one)*
+
+```bash
+everyconfig <config dir> <variable prefix>
+```
+
+```bash
+source $path_to_everyconfig/bash/everyconfig.sh
+
+# you should use an absolute path for the directory that holds your config files
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+#           directory        prefix
+everyconfig "$DIR"/../config CONFIG_
+echo $CONFIG_mongodb_url
+```
+## contact me
+Send me a pr or an email 😀
