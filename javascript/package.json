@@ -1,12 +1,17 @@
 {
   "name": "everyconfig",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Use the same yaml config files in every language",
   "main": "everyconfig.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/test.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pbrandt1/everyconfig"
+  },
+  "author": "Peter Brandt <peter.m.brandt@gmail.com>",
+  "keywords": ["yaml", "configuration"],
   "author": "",
   "license": "MIT",
   "dependencies": {
