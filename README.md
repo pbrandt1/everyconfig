@@ -11,9 +11,9 @@ Set up your config files in a directory like this:
 |   └── test.yaml
 ├── foo
 |   ├── foo.js
-|   └── blue.js
+|   └── blue.py
 └── bar
-    ├── something.py
+    ├── something.sh
     └── post.py
 ```
 Then set `CONFIG_ENV` to one of the names of your yaml files, like so: `CONFIG_ENV=production node app.js`
@@ -77,5 +77,18 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 everyconfig "$DIR"/../config CONFIG_
 echo $CONFIG_mongodb_url
 ```
+
+# c
+(not published yet)
+```bash
+clib install pbrandt1/everyconfig
+```
+
+```c
+hash_t *config = hash_new();
+everyconfig(abs_path_to_config, config);
+hash_get(config, "mongodb.url");
+```
+
 ## contact me
 Send me a pr or an email 😀
